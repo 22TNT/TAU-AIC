@@ -39,7 +39,7 @@ async def help(ctx):
     s = " "
     for key in LOCATION_DATA.keys():
         s += key + "\n" + " "
-    await ctx.send("```\n" + "Локации для !check:\n" + s + "!safe CODECODE\n "+  "```")
+    await ctx.send("```\n" + "Локации для !check:\n" + s + "!safe CODECODE\n " + "```")
 
 
 @bot.event
