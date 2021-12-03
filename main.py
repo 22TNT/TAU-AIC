@@ -19,7 +19,7 @@ bot.remove_command("help")
 @bot.command()
 async def check(ctx, *args):
     if not args or args[0] not in LOCATION_DATA.keys():
-        await ctx.send("Use !list to get a list of all places and commands")
+        await ctx.send("Используйте !help для вывода всех мест и всех команд")
     else:
         args = args[0]
         await ctx.send("```\n" + LOCATION_DATA[args] + "\n```")
@@ -36,9 +36,9 @@ async def safe(ctx, code):
 
 @bot.command()
 async def help(ctx):
-    s = " "
+    s = ""
     for key in LOCATION_DATA.keys():
-        s += key + "\n" + " "
+        s += " " + key + "\n"
     await ctx.send("```\n" + "Локации для !check:\n" + s + "!safe CODECODE\n " + "```")
 
 
